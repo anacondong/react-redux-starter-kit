@@ -1,0 +1,9 @@
+
+Build Docker File
+https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images
+
+docker build -t anacondong/react-starter-kit .
+
+docker login
+docker tag anacondong/react-starter-kit anacondong/react-starter-kit:1.0.0
+docker push anacondong/react-starter-kit:1.0.0
