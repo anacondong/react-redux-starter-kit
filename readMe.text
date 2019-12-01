@@ -7,3 +7,11 @@ docker build -t anacondong/react-starter-kit .
 docker login
 docker tag anacondong/react-starter-kit anacondong/react-starter-kit:1.0.0
 docker push anacondong/react-starter-kit:1.0.0
+
+how to build:
+docker pull anacondong/react-starter-kit:1.0.0
+docker run -p 80:3000 anacondong/react-starter-kit
+
+how to remove:
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
