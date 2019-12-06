@@ -3,15 +3,37 @@ Build Docker File
 https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images
 
 docker build -t anacondong/react-starter-kit .
+docker run -p 80:3000 anacondong/react-starter-kit:latest
+docker ps -a
+docker stop {containerId}
+
+** Login Registry
 
 docker login
 docker tag anacondong/react-starter-kit anacondong/react-starter-kit:1.0.0
 docker push anacondong/react-starter-kit:1.0.0
 
+
 how to build:
 docker pull anacondong/react-starter-kit:1.0.0
-docker run -p 80:3000 anacondong/react-starter-kit
+docker run -p 80:3000 anacondong/react-starter-kit:latest
 
 how to remove:
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
+
+
+Kubernetes:
+https://www.crafter.blog/article/how-to-install-kubernetes-on-windows-10
+
+https://github.com/kubernetes/dashboard
+
+
+
+
+
+
+https://medium.com/easyread/step-by-step-introduction-to-basic-concept-of-kubernetes-e20383bdd118
+
+minikube start
+git clone https://github.com/buildkite/nodejs-docker-example.git
